@@ -1,0 +1,1 @@
+This will be a weather application that receives live weather updates from a API. The tools used will be JavaScript, HTML, and CSS. 
