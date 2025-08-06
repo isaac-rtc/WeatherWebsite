@@ -1,22 +1,51 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 body{
     background: #222;
 }
+
+/* Everything below is the overall css*/
+.card-groupings{
+    width: 100;
+    display: flex;
+    gap:20px;
+    align-items: start;
+}
 .card{
-    width: 90%;
-    max-width: 470px;
+    width: 30%;
     background: linear-gradient(135deg, #00feba, #56548a);
     color: #fff;
-    margin: 75px auto auto;
+    margin-top: 30px;
+    margin-left: 150px;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
 }
+
+.right-side-cards{
+    display: flex;
+    width:70%;
+    margin-top:30px;
+    color: #fff;
+    flex-direction: row;
+    gap:15px;
+    flex-wrap: wrap;
+}
+
+.small-card{
+    width: 45%;
+    background: linear-gradient(135deg, #00feba, #56548a);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+
+/* here we get down to search specifics */
+
 .search{
     width: 100%;
     display: flex;
@@ -51,10 +80,13 @@ body{
     width: 16px;
 }
 
+
+/*Here is the css for the main card */
 .weather-icon{
     width: 170px;
     margin-top: 30px;
 }
+
 .weather h1{
     font-size: 80px;
     font-weight: 500;
@@ -69,7 +101,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
     margin-top: 50px;
 }
 .col{
@@ -99,4 +130,63 @@ body{
     font-size: 14px;
     margin-top: 10px;
     display:none;
+}
+
+/*css for the individual cards, starting from 1 */
+.weather-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.img-row img{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.firstimg{
+    width: 120px;
+}
+
+.secondimg{
+    width: 80px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    
+}
+
+.thirdimg{
+    padding-left: 45px;
+    padding-bottom: 18px;
+}
+
+.data-row{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.data-row h1{
+    font-weight:400;
+}
+#temp1{
+    font-size: 40px;
+    margin-right: 50px;
+}
+
+#humid1{
+    margin-right: 20px;
+}
+
+#wind1{
+    font-size: 30px;
+    margin-left: auto;
+}
+
+
+
+
+#city1{
+    margin-right: 200px;
 }

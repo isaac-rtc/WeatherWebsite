@@ -6,36 +6,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="card">
-    <div class="search">
-        <input type="text" placeholder="Enter a city name" 
-        spellcheck="false">
-        <button><img src="images/search.png" ></button>
-    </div>
-    <div class="error">
-        <p>Invalid city name</p>
-    </div>
-    <div class="weather">
-        <img src="images/rain.png" class="weather-icon">
-        <h1 class="temp">22°c</h1>
-        <h2 class="city">New York</h2>
-        <div class="details">
-            <div class="col">
-                <img src="images/humidity.png">
-                <div>
-                    <p class="humidity">50%</p>
-                    <p>Humitdity</p>
+<div class="card-groupings">
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter a city name" 
+            spellcheck="false">
+            <button><img src="images/search.png" ></button>
+        </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">22°c</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humitdity</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <img src="images/wind.png">
-                <div>
-                    <p class="wind">15 km/h</p>
-                    <p>Wind Speed</p>
+                <div class="col">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- The only things that have to change are the temp img and the actual details of 
+     humidity, wind speed, and temp -->
+    <div class="right-side-cards">
+        <div class="small-card">
+            <div class="weather-flex">
+                <!-- this is for the img rows-->
+                <div class="img-row">
+                    <img src="images/clear.png" id="side-img1" class="firstimg">
+                    <img src="images/humidity.png"  class="secondimg">
+                    <img src="images/wind.png" class="thirdimg">
+                </div>
+                <div class="data-row">
+                    <h1 id="temp1">22°c</h1>
+                    <h1 id="humid1">50%</h1>
+                    <h1 id="wind1">15 km/h</h1>
+                </div>
+                <div class="city-name">
+                    <h1 id="city1">
+                        New York
+                    </h1>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -53,6 +79,7 @@
         if(response.status == 404){
             document.querySelector(".error").style.display = "block";
             document.querySelector(".weather").style.display = "none";
+            document.querySelector(".right-side-cards").style.display = "none";
         } else{
              var data = await response.json();
             //data will collect the response
@@ -80,6 +107,7 @@
             
             document.querySelector(".weather").style.display = "block";
             document.querySelector(".error").style.display = "none";
+            
         }
 
     }
