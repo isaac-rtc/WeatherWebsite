@@ -1,1 +1,1 @@
-This will be a weather application that receives live weather updates from a API. The tools used will be JavaScript, HTML, and CSS. 
+A responsive single-page weather application built with JavaScript, HTML, and CSS. It retrieves real-time weather data from the OpenWeather API and displays temperature, humidity, wind speed, and condition-based icons. Includes error handling for invalid inputs, a modern gradient UI, and responsive card layouts optimized for different devices.
